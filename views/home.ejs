@@ -1,0 +1,133 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="/w3styles.css" />-->
+    <link rel="stylesheet" type="text/css" media="screen" href="/app.css">
+   
+    
+</head>
+
+<body class='animBack w3-container'>
+
+<section class="w3-container">
+
+<div  class="animBack">   
+           
+ 
+<style>
+#siteNav{width:100%;border:1px solid purple;text-align:center}
+#siteNav a li{display:inline;color:black;font-size:1em;text-align:center;display:none;}
+#siteNav a{
+background-color:rgba(100,80,0,0.8);
+text-decoration:none;
+font-size:1.5em;
+color:white;
+padding:0.2em 0.7em;
+}
+/*
+#siteNav a li:hover{
+color:red;
+width:19em;
+height:25em;
+background:blue;
+display:inline;
+}*/
+#demo{
+width:99%;
+height:130%;
+background-color:rgb(37, 30, 30);
+opacity: 0.5;
+position:fixed;
+left:-87%;
+top:-20px;
+font-size:2em;
+text-align: right;
+padding-right:0.5em;
+color:white;
+
+}
+#demo ul{
+margin-top:8em;
+box-sizing:border-box;
+}
+#demo li{
+        list-style:outside none none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="demo">
+
+<ul>
+<li>Home</li>
+<li><a href="cartoons">Cartoons</a></li>
+<li>Gaming</li>
+<li>Contact</li>
+<li>Twitter</li>
+<li>Instagram</li>
+<li>Facebook</li>
+</ul>
+<p style="font-size:0.7em ; width:28em ; margin-left:15em ; margin-top:-22em; text-align:center;font-weight: 800 ">
+                I am an animator/cartoonist and interactive designer.
+
+                I worked as an editorial cartoonist for a newspaper in Nigeria.
+                Prior to that, I worked as an art teacher at primary,secondary and tertiary levels in Nigeria
+                
+                I won award at regional and national levels.
+                I resigned voluntarily in 2004 as the Cartoon Editor of the group of newspapers.
+                
+                Since I left, I had dabbled into web design and a bit of web development. I ran an online
+                cartoon blog for a short while. I had earlier done some web design and development training.
+                I have a CIW Master Designer certificate.
+                I have also explored the animation part of cartooning. I have continued experimenting with web design tools.
+                I use Adobe tools like Illustrator,Dreamweaver,Photoshop as well as Animate.
+                I worked with Creative Professionals for a couple of years. I also did some freelancing as a designer/illustrator. 
+</p>
+</div>
+<script>
+var el=document.getElementsByTagName("a");
+for (var i=0;i<el.length;i++){
+el[i].addEventListener("mouseover",dropDown);
+el[i].addEventListener("mouseout",cancelDrop);
+function dropDown(){
+this.style.transition="background-color 0.6s linear 0.1s";
+this.style.backgroundColor="blue";
+  //alert("HI");
+}
+function cancelDrop(){
+this.style.transition="background-color 0.6s linear 0.1s";
+//this.style.cssText="background-color:olive-green";
+this.style.backgroundColor="rgba(100,80,0,0.8)";
+}
+}
+
+var demos=document.getElementById("demo");
+demos.addEventListener("mouseover",slideIn);
+demos.addEventListener("mouseout",slideOut);
+
+function slideIn(){
+//alert("HI");
+this.style.transition="left 0.6s ease-in 0.3s";
+this.style.left="0px";
+}
+
+function slideOut(){
+//alert("HI");
+this.style.transition="left 0.6s ease-out 0.3s";
+this.style.left="-87%";
+}
+</script>
+
+
+
+
+<% include partials/footer %>
+
+
+
+
